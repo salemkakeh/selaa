@@ -1,0 +1,195 @@
+
+
+
+
+.gradient {
+  background-image: linear-gradient(-45deg , #052146 ,#0d4082);
+}
+.back a {
+  transition: .4s;
+  z-index: 1111;
+
+}
+.back a:hover {
+  background-color: var(--button-color);
+  border-color: var(--text);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.back a:hover i { 
+  color:  var(--text);
+}
+
+.inputs input:focus + label {
+  color: var(--button-color);
+}
+.inputs input:valid:not(:focus) ~ label {
+  color: var(--green);
+}
+.inputs input:valid:not(:focus) {
+  border-color: var(--green);
+}
+.inputs input:focus {
+  border-color: var(--button-color);
+}
+.inputs i {
+  display: none;
+  color: var(--green);
+}
+
+.inputs input:valid + i {
+  display: block;
+}
+
+main .container {
+  height: calc(100vh - 90px);
+}
+main header .container {
+  height: auto;
+}
+
+
+
+
+.steps .step.active {
+  border: 3px solid var(--green);
+  background-color: transparent;
+}
+.steps span.active {
+  background-image: linear-gradient(to left , var(--green) , var(--gray));
+}
+.steps span.active-full {
+
+  background-color: var(--green);
+}
+
+
+
+/* start customaize main page  */
+header .link > li {
+  padding-inline: 10px;
+}
+header .link li:hover {
+  color: var(--button-color);
+}
+header .link > li:hover .text > i {
+  transform: scaleY(-1) rotate(270deg);
+}
+header .link li:hover .big-menu {
+  display: block;
+}
+
+
+header .container .menu {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+header .container .menu span {
+  height: 4px;
+  width: 100%;
+  background-color: var(--text);
+  position: absolute;
+  transition: .2s;
+  border-radius: 4px;
+}
+
+header .container .menu span:first-child {
+  top: 0;
+}
+
+header .container .menu:hover span:last-child {
+  bottom: 50%;
+  transform: translateY(50%) rotate(45deg);
+}
+header .container .menu:hover span:first-child {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+header .container .menu:hover span:nth-child(2) {
+  opacity: 0;
+}
+
+
+header .container .menu span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .container .menu span:last-child {
+  bottom: 0;
+} 
+
+
+/* start customaize leanding page */
+
+/* width="659" height="600" */
+
+#svg-section {
+  flex-basis: 45vw;
+}
+svg {
+  transform: rotateX(45deg) scale(0.9);
+  overflow: visible;
+}
+
+svg path {
+  fill: transparent;
+  transition: .2s;
+  stroke: transparent;
+  animation-name: change-op;
+  animation-duration: 1s;
+  animation-delay: calc(var(--i) * 0.2s);
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+svg path:hover {
+  fill: #0af !important;
+  cursor: pointer;
+  transform: translateY(-15px);
+}
+
+.custom-tooltip {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  /* border: 2px solid #0af; */
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s;
+  transform: translate(-50%, -100%);
+  direction: rtl;
+  white-space: nowrap;
+}
+
+@keyframes change-op {
+  from {
+    fill: transparent;
+    stroke: transparent;
+  }
+
+  to {
+    fill: #FFF;
+    stroke: #c3c3c3;
+  }
+}
+
+/* end customaize leanding page */
+
+/* end customaize main page  */
+
+
+
+/* updatre container for chrome broser screen */
+.container {
+  @media (width >= 96rem) {
+    max-width: 90rem !important;
+  }
+}
+/* updatre container for chrome broser */

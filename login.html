@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- box icons library -->
+  <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="./dist/style.css">
+  
+  <link rel="stylesheet" href="dist/gloabel.css">
+  
+  <link rel="stylesheet" href="dist/main.css">
+
+  <link rel="icon" href="images/logo-icon-white.svg" type="image/x-icon">
+  <title>Selaa</title>
+</head>
+<body class="h-screen gradient">
+  <header dir="ltr">
+    <div class="container mx-auto p-6 h-[90px]">
+      <div class="logo flex space-x-5">
+        <img src="images/logo-icon-white.svg" width="60px" alt="logo">
+        <img src="images/new.svg" width="80px" alt="text logo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container mx-auto flex justify-center items-center px-6">
+      <div class="cont-form flex flex-col space-y-10 items-center  w-[400px]">
+        <h2 class="text-xl mb-0 text-(--text)">
+          مرحباً بك في سلعة
+        </h2>
+        <hr class=" w-1/6 h-1 mt-4 mb-4 border-t-2 border-(--green)">
+        <h1 class="text-3xl mb-5 text-(--text)">تسجيل الدخول</h1>
+        <form action="" class="bg-(--text) p-6 rounded-4xl w-full mb-5 relative">
+          <div class="back">
+            <a href="main.html" class="border border-(--gray) flex rounded-full w-fit items-center justify-center absolute top-[15px] left-[15px] p-1">
+              <i class='bx bx-x text-xl text-(--gray)'></i>
+            </a>
+            <p class="text-[10px] text-center">
+              من فضلك قم بادخال البريد الالكتروني وكلمة المرور للمتابعة.
+            </p>
+          </div>
+          <div class="link w-fit mx-auto bg-[#f3f5f6] flex items-center justify-center gap-2 px-3 py-1.5 rounded-full mt-2 cursor-no-drop ">
+            <a class="text-[12px]">https://selaa.com</a>
+            <i class='bx bxs-lock-alt text-[12px] text-(--green)' ></i>
+          </div>
+          <div class="inputs mt-4 flex flex-col-reverse relative">
+              <input type="email"  required class="w-full mt-1 h-10 rounded-[10px] outline-0 border-2 p-2 border-(--gray)" name="email" id="email">
+              <i class='bx bx-check  absolute top-1/2 left-2 translate-y-1'></i> 
+            <label for="email">
+              البريد الالكتروني
+            </label>
+          </div>
+          <div class="inputs flex flex-col-reverse relative">
+            <input type="password" required minlength="8" class="w-full mt-1 h-10 rounded-[10px] outline-0 border-2 p-2 border-(--gray)" name="password" id="password">
+            <i class='bx bx-check  absolute top-1/2 left-2 translate-y-1'></i> 
+            <label for="password">
+              كلمة المرور
+            </label>
+          </div>
+
+          <div class="link flex my-2 ">
+            <p class="text-[12px]">هل نسيت كلمة المرور؟</p>
+            <a href="#" class="text-[12px] text-(--button-color) hover:underline">
+              اضغط هنا!
+            </a>
+          </div>
+          <input type="submit" id="sub" class="w-full mt-1 h-10 rounded-full outline-0 cursor-pointer bg-[#w-full mt-1 h-10 rounded-[10px] outline-0 p-2 bg-(--green) text-(--text) hover:opacity-90 disabled:bg-(--gray) disabled:cursor-no-drop" disabled value="تسجيل">
+        </form>
+        <div class="link flex my-2 gap-4 items-center">
+          <p class="text-lg text-[#8290a3]">
+            اليس لديك حساب؟
+          </p>
+          <a href="regest.html" class="text-lg text-(--text) hover:bg-(--button-color) duration-500 border-2 border-(--button-color) py-2 px-4 rounded-full">
+            سجل الآن!
+          </a>  
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
