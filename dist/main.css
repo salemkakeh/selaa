@@ -99,15 +99,15 @@ header .container .menu span:first-child {
   top: 0;
 }
 
-header .container .menu:hover span:last-child {
+header .container .menu.active span:last-child {
   bottom: 50%;
   transform: translateY(50%) rotate(45deg);
 }
-header .container .menu:hover span:first-child {
+header .container .menu.active span:first-child {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
-header .container .menu:hover span:nth-child(2) {
+header .container .menu.active span:nth-child(2) {
   opacity: 0;
 }
 
@@ -119,6 +119,18 @@ header .container .menu span:nth-child(2) {
 header .container .menu span:last-child {
   bottom: 0;
 } 
+
+
+header .container aside .nav.active {
+  display: none;
+}
+header .container aside {
+  display: none;
+}
+header .container aside.active {
+  display: block;
+}
+
 
 
 /* start customaize leanding page */
@@ -179,6 +191,10 @@ svg path:hover {
     stroke: #c3c3c3;
   }
 }
+
+
+
+
 
 /* end customaize leanding page */
 

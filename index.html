@@ -49,12 +49,8 @@
                     text-(--t-black) text-sm
                     justify-between
                   ">
-                <a href="#" class="
-                      flex
-                      p-6
-                      rounded-2xl
-                      col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]
-                    ">
+
+                <a href="#" class="flex p-6 rounded-2xl col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
                   <i class='text-3xl bx bxs-store'></i>
                   <div>
                     <h2 class="font-bold ">تصميم متجر</h2>
@@ -62,12 +58,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="
-                      flex
-                      p-6
-                      rounded-2xl
-                      col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]
-                    ">
+                <a href="#" class="flex p-6 rounded-2xl col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
                   <i class='text-3xl bx bxs-wallet'></i>
                   <div>
                     <h2 class="font-bold "> المدفوعات</h2>
@@ -75,12 +66,7 @@
                   </div>
                 </a>
 
-                <a href="#" class="
-                      flex
-                      p-6
-                      rounded-2xl
-                      col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]
-                    ">
+                <a href="#" class="flex p-6 rounded-2xl col justify-center items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
                   <img src="images/mic.svg" width="30px" alt="">
                   <div>
                     <h2 class="font-bold ">أدوات التسويق</h2>
@@ -268,11 +254,58 @@
             ">انشئ متجرك الآن</a>
         </div>
 
-        <div class="menu lg:hidden">
+        <div id="menu-button" class="menu lg:hidden">
           <span></span>
           <span></span>
           <span></span>
         </div>
+        <aside id="aside-menu-button" class="text-(--t-black) p-3 h-[50vh] bg-[#fdfdfd] rounded-b-2xl absolute left-0 right-0 top-[90px] z-[111111] shadow-xl overflow-auto">
+          <ul>
+            <li>
+              <div class="heading-mob p-4 text-lg mb-2 cursor-pointer hover:bg-[#c3c3c342] rounded-2xl">
+                الحلول
+                <i class=' bx bx-caret-left bx-rotate-270'></i>
+              </div>
+              <nav class="nav active">
+                <a href="#" class="flex p-6 rounded-2xl col text-sm items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
+                  <i class='text-3xl bx bxs-store'></i>
+                  <div>
+                    <h2 class="font-bold ">تصميم متجر</h2>
+                    <p class="">صمم متجر احترافي بكل سهولة</p>
+                  </div>
+                </a>
+                <a href="#" class="flex p-6 rounded-2xl text-sm col items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
+                  <i class='text-3xl bx bxs-wallet'></i>
+                  <div>
+                    <h2 class="font-bold "> المدفوعات</h2>
+                    <p>استقبل و أدر مدفوعاتك بآمان</p>
+                  </div>
+                </a>
+                <a href="#" class="flex p-6 rounded-2xl text-sm col  items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
+                  <img src="images/mic.svg" width="30px" alt="">
+                  <div>
+                    <h2 class="font-bold ">أدوات التسويق</h2>
+                    <p>ارفع مبيعاتك مع حلول تسويقية متعددة</p>
+                  </div>
+                </a>
+                <a href="#" class="flex p-6 rounded-2xl text-sm col  items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
+                  <img src="images/mic.svg" width="30px" alt="">
+                  <div>
+                    <h2 class="font-bold ">أدوات التسويق</h2>
+                    <p>ارفع مبيعاتك مع حلول تسويقية متعددة</p>
+                  </div>
+                </a>
+                <a href="#" class="flex p-6 rounded-2xl text-sm col  items-center gap-4 duration-200 hover:bg-[#c3c3c342]">
+                  <img src="images/mic.svg" width="30px" alt="">
+                  <div>
+                    <h2 class="font-bold ">أدوات التسويق</h2>
+                    <p>ارفع مبيعاتك مع حلول تسويقية متعددة</p>
+                  </div>
+                </a>
+              </nav>
+            </li>
+          </ul>
+        </aside>
       </div>
     </header>
 
@@ -406,30 +439,6 @@
     </div>
   </main>
   <script src="dist/scrollreveal/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script>
-    // main animation
-    const scrollRevealOption = {
-      distance: "50px",
-      origin: "right",
-      duration: 1000,
-      easing: "ease-in-out",
-    };
-
-    ScrollReveal().reveal("#heading-text", {
-      ...scrollRevealOption
-    });
-
-    ScrollReveal().reveal("#pargraph-text", {
-      ...scrollRevealOption,
-      delay: 300,
-    });
-
-    ScrollReveal().reveal("#buttons-id", {
-      ...scrollRevealOption,
-      delay: 600,
-      origin: "right",
-    });
-  </script>
   <script src="js/map.js"></script>
 </body>
 
