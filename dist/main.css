@@ -40,9 +40,6 @@
   display: block;
 }
 
-main .container {
-  height: calc(100vh - 90px);
-}
 main header .container {
   height: auto;
 }
@@ -140,12 +137,12 @@ header .container aside.active {
 #svg-section {
   flex-basis: 45vw;
 }
-svg {
+#svg-section svg {
   transform: rotateX(45deg) scale(0.9);
   overflow: visible;
 }
 
-svg path {
+#svg-section svg path {
   fill: transparent;
   transition: .2s;
   stroke: transparent;
@@ -157,7 +154,7 @@ svg path {
   animation-fill-mode: both;
 }
 
-svg path:hover {
+#svg-section svg path:hover {
   fill: #0af !important;
   cursor: pointer;
   transform: translateY(-15px);
@@ -189,6 +186,7 @@ svg path:hover {
   to {
     fill: #FFF;
     stroke: #c3c3c3;
+    color: #092448;
   }
 }
 
@@ -209,3 +207,30 @@ svg path:hover {
   }
 }
 /* updatre container for chrome broser */
+
+
+
+/* START animation section 3 o nmain page */
+
+/* @keyframes move_one {
+  0% {
+    transform: translateX(0);
+  } 
+  100% {
+    transform: translateX(20px);
+  }
+
+
+}
+
+.content .child:nth-child(1) {
+  animation: move_one 1s infinite linear both alternate;
+}
+.content .child:nth-child(4) {
+  animation: move_one 1s infinite linear both alternate;
+} */
+
+
+
+
+/* END animation section 3 o nmain page */
