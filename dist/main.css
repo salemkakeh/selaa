@@ -1,42 +1,45 @@
-
-
-
-
 .gradient {
-  background-image: linear-gradient(-45deg , #052146 ,#0d4082);
+  background-image: linear-gradient(-45deg, #052146, #0d4082);
 }
+
 .back a {
   transition: .4s;
   z-index: 1111;
 
 }
+
 .back a:hover {
   background-color: var(--button-color);
   border-color: var(--text);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.back a:hover i { 
-  color:  var(--text);
+
+.back a:hover i {
+  color: var(--text);
 }
 
-.inputs input:focus + label {
+.inputs input:focus+label {
   color: var(--button-color);
 }
-.inputs input:valid:not(:focus) ~ label {
+
+.inputs input:valid:not(:focus)~label {
   color: var(--green);
 }
+
 .inputs input:valid:not(:focus) {
   border-color: var(--green);
 }
+
 .inputs input:focus {
   border-color: var(--button-color);
 }
+
 .inputs i {
   display: none;
   color: var(--green);
 }
 
-.inputs input:valid + i {
+.inputs input:valid+i {
   display: block;
 }
 
@@ -51,9 +54,11 @@ main header .container {
   border: 3px solid var(--green);
   background-color: transparent;
 }
+
 .steps span.active {
-  background-image: linear-gradient(to left , var(--green) , var(--gray));
+  background-image: linear-gradient(to left, var(--green), var(--gray));
 }
+
 .steps span.active-full {
 
   background-color: var(--green);
@@ -62,15 +67,18 @@ main header .container {
 
 
 /* start customaize main page  */
-header .link > li {
+header .link>li {
   padding-inline: 10px;
 }
+
 header .link li:hover {
   color: var(--button-color);
 }
-header .link > li:hover .text > i {
+
+header .link>li:hover .text>i {
   transform: scaleY(-1) rotate(270deg);
 }
+
 header .link li:hover .big-menu {
   display: block;
 }
@@ -100,10 +108,12 @@ header .container .menu.active span:last-child {
   bottom: 50%;
   transform: translateY(50%) rotate(45deg);
 }
+
 header .container .menu.active span:first-child {
   top: 50%;
   transform: translateY(-50%) rotate(-45deg);
 }
+
 header .container .menu.active span:nth-child(2) {
   opacity: 0;
 }
@@ -113,17 +123,20 @@ header .container .menu span:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
 }
+
 header .container .menu span:last-child {
   bottom: 0;
-} 
+}
 
 
 header .container aside .nav.active {
   display: none;
 }
+
 header .container aside {
   display: none;
 }
+
 header .container aside.active {
   display: block;
 }
@@ -137,6 +150,7 @@ header .container aside.active {
 #svg-section {
   flex-basis: 45vw;
 }
+
 #svg-section svg {
   transform: rotateX(45deg) scale(0.9);
   overflow: visible;
@@ -202,10 +216,11 @@ header .container aside.active {
 
 /* updatre container for chrome broser screen */
 .container {
-  @media (width >= 96rem) {
+  @media (width >=96rem) {
     max-width: 90rem !important;
   }
 }
+
 /* updatre container for chrome broser */
 
 
@@ -234,3 +249,77 @@ header .container aside.active {
 
 
 /* END animation section 3 o nmain page */
+
+
+
+
+
+
+/* start animate buttons */
+.animate-button:hover {
+  transform: scale(1.05);
+}
+
+.animate-button i {
+  transition: .2s;
+}
+
+.animate-button:hover i {
+  margin-right: 3px;
+}
+
+/* end animate buttons */
+.cards {
+  scrollbar-width: 0;
+}
+
+
+.cards::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
+/* start move buttons */
+.move-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-direction: row-reverse;
+  gap: 40px;
+}
+
+.move-buttons button {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #18640c;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: background-color .2s;
+}
+
+.move-buttons button:hover {
+  background-color: #23c10c;
+}
+
+.move-buttons button:disabled {
+  cursor: no-drop;
+  background-color: #c3c3c365;
+}
+
+/* end move buttons */
+
+#svgp {
+  overflow: visible;
+  cursor: none; /* إخفاء المؤشر الافتراضي */
+}
+#svg {
+  transition: .03s !important;
+  animation: none !important;
+  z-index: 1111;
+/*  */
+ /* transform:scale(0.8);*/
+}

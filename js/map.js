@@ -133,3 +133,95 @@ function change_status() {
 heading_mob.forEach((element) => {
   element.addEventListener("click", change_status);
 });
+
+
+
+
+
+
+
+
+// start move buttons
+
+let next  = document.getElementById("next");
+let preve = document.getElementById("preve");
+let cards = document.getElementById("cards");
+
+let maxwidth = cards.scrollWidth - cards.clientWidth;
+
+
+next.onclick = function () {
+  preve.removeAttribute("disabled");
+
+
+  const scrollAmount = (320) * -1;
+  cards.scrollBy({left: scrollAmount , behavior: "smooth"});
+  if (cards.scrollLeft * -1 >= maxwidth - 340) {
+    next.disabled = true;
+  }
+}
+
+preve.onclick = function () {
+  let cards = document.getElementById("cards");
+  cards.scrollBy({left: 320 , behavior: "smooth"});
+
+  next.removeAttribute("disabled");
+
+  if(Math.trunc(cards.scrollLeft) > -340) {
+    preve.disabled = true;
+  } else {
+    preve.removeAttribute("disabled");
+  }
+}
+
+
+// cards.addEventListener("scroll" , function () {
+//   if(cards.scrollLeft == 0)
+//     preve.disabled = true;
+//   else if(cards.scrollLeft < -50)
+//     preve.removeAttribute("disabled");
+//   if(cards.scrollLeft + cards.clientWidth * -1 <= cards.scrollWidth )  {
+//     next.disabled = true;
+
+//   }
+//   console.log((cards.scrollLeft + cards.scrollWidth) * -1);
+//   console.log(cards.scrollWidth);
+
+
+// });
+
+
+// start muose move on section three
+const customCursor = document.getElementById("svg");
+const svgp = document.getElementById("svgp");
+
+// إعدادات الأداء
+let lastX = 0, lastY = 0;
+let animationFrame;
+
+// دالة التحديث الأمثل
+const updateCursor = (e) => {
+  const rect = svgp.getBoundingClientRect();
+  const x = e.clientX - rect.left - 40;
+  const y = e.clientY - rect.top - 40;
+  
+  // تحديث مباشر بدون requestAnimationFrame
+  customCursor.setAttribute('transform', `translate(${x},${y}) scale(0.2)`);
+};
+
+// معالجة الحركة بأعلى أداء
+svgp.addEventListener('mousemove', (e) => {
+  // إلغاء أي إطارات سابقة
+  if(animationFrame) cancelAnimationFrame(animationFrame);
+  
+  // التحديث المباشر
+  updateCursor(e);
+  
+  // تحديث إضافي لضمان السلاسة
+  animationFrame = requestAnimationFrame(() => updateCursor(e));
+});
+
+// إعادة التعيين عند المغادرة
+svgp.addEventListener('mouseleave', () => {
+  customCursor.removeAttribute('transform');
+});
