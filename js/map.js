@@ -225,3 +225,14 @@ svgp.addEventListener('mousemove', (e) => {
 svgp.addEventListener('mouseleave', () => {
   customCursor.removeAttribute('transform');
 });
+
+
+
+
+let html = document.getElementById("html");
+
+document.addEventListener("scroll" , () => {
+  let header = document.getElementById("header");
+  console.log(header.scrollLeft);
+
+});
