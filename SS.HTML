@@ -1,95 +1,60 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-    }
-    #svgp {
-      cursor: none; /* إخفاء المؤشر الافتراضي */
-    }
-    #svg {
-      transition: .03s !important;
-      animation: none !important;
-      z-index: 1111;
-/*  */
-     /* transform:scale(0.8);*/
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
+  <form onsubmit="syncContentEditable();">
+  <div contenteditable="true" id="editableField">اكتب هنا...</div>
+  <input type="hidden" name="editableContent" id="hiddenField">
+  <button type="submit">إرسال</button>
+</form>
 
-  <svg xmlns="http://www.w3.org/2000/svg" id="svgp" viewBox="0 0 261.06 256.48" width="200" style="overflow: visible;">
-    <g data-name="Layer 2">
-      <g data-name="Layer 1">
-        <path fill="#00c951"
-        d="M249.66 131.64a124.73 124.73 0 01-124.81 124.84H11.56l39.92-23.84a124.82 124.82 0 11198.18-101z" />
-        <path fill="#11396c"
-        d="M261.06 124.81a124.78 124.78 0 01-124.81 124.85H23l39.91-23.84a124.82 124.82 0 11198.18-101z" />
-        <path fill="#00c951"
-        d="M176.39 163.3c-5 2.8-11.64-.25-13-6.1a8.76 8.76 0 012.78-9 9 9 0 019.44-1.81 3.94 3.94 0 01.67.42 9 9 0 00-5 8.4 8.78 8.78 0 005.11 8.09z" />
-        <path fill="#FFF"
-        d="M176.28 55.83a33.79 33.79 0 0129.35 28.44c.11.7-.13 1.44.33 2.08v6.24c-.66 2.18-.85 4.47-1.58 6.64a33.33 33.33 0 01-20 21.31c-2.23.9-2.77 1.61-2.82 4 0 2 .21 4.05-.5 6a8.72 8.72 0 01-4.71 5.27 9.28 9.28 0 01-5.07-8.09 36.64 36.64 0 01.11-5.54c.76-8 4.65-14 11.83-17.72 1.6-.83 3.38-1.33 4.9-2.27 8.57-5.29 10.14-16.12 3.28-23.47a14 14 0 00-14.64-4.13c-6-1.44-11.28-.2-15.57 4.38a13.89 13.89 0 00-3.86 8.73c-.18 2.58-.41 5.12-2.21 7.21A7.86 7.86 0 01152 97.4c-2.79-1.61-4.65-3.9-4.9-7.18A28.54 28.54 0 01149.67 76c5.25-11.43 14.18-18.15 26.61-20.17z" />
-        <path fill="#00c951"
-        d="M176.77 74.65a14 14 0 0114.64 4.13c6.86 7.35 5.29 18.18-3.28 23.47-1.52.94-3.3 1.44-4.9 2.27-7.18 3.73-11.07 9.67-11.83 17.72a36.64 36.64 0 00-.11 5.54 9.28 9.28 0 005.07 8.09 9 9 0 01-13.05-7c-.58-5.19-.24-10.29 2.25-15a20.71 20.71 0 0111.33-10.11c6.78-2.57 10.62-8 10.57-15.2a15.21 15.21 0 00-9.58-13.39c-.38-.17-.74-.36-1.11-.52z" />
-        <path fill="#00c951"
-        d="M176.28 55.83c-12.43 2-21.36 8.74-26.61 20.15a28.54 28.54 0 00-2.61 14.24c.25 3.28 2.11 5.57 4.9 7.18a9.13 9.13 0 01-13.18-8.64 32.12 32.12 0 017.35-20.45c7.41-9 17-13.18 28.67-12.64.5.03.99.11 1.48.16z" />
-        <path fill="#FFF"
-        d="M176.39 163.3a8.78 8.78 0 01-5.06-8.05 9 9 0 015-8.4c5.18 2.06 7.05 9.56 3.44 13.79a8.26 8.26 0 01-3.38 2.66z" />
-        <g id="svg" >
-          <path fill="#000"
-            d="M84.61 108.07l34.92 12.64q11.68 4.23 23.35 8.49a6 6 0 014.27 5.51 5.89 5.89 0 01-3.12 5.85c-3.56 2.11-7.13 4.22-10.74 6.26-.88.49-.83.76-.18 1.41 5.38 5.35 10.77 10.7 16.11 16.1 5.51 5.56 7 12.1 4.12 19.36a15.83 15.83 0 01-9.88 9.36 25 25 0 01-8-6c-5.41-5.52-10.91-11-16.39-16.41-3.55-3.53-9-2.92-11.12 1.21q-3.09 5.17-6.17 10.36c-.71-2-1.39-4-2.12-6q-5.76-15.87-11.55-31.73c-2.48-6.82-5-13.63-7.44-20.45-1-2.67-2-5.32-1.35-8.28a12.27 12.27 0 015.29-7.68z" />
-          <path fill="#00c951"
-            d="M84.61 108.07a12.27 12.27 0 00-5.25 7.73c-.63 3 .38 5.61 1.35 8.28 2.46 6.82 5 13.63 7.44 20.45l11.55 31.73c.73 2 1.41 4 2.12 6a8.42 8.42 0 01-2.75 3.42c-3.77 2.23-7.94.59-9.52-3.77-3.84-10.58-7.64-21.18-11.49-31.76Q73 136.26 67.9 122.4c-2.1-5.67-.39-11.13 4.7-14.35a10.4 10.4 0 018.4-1.21c1.25.31 2.42.81 3.61 1.23z" />
-          <path fill="#00c951"
-            d="M108 171.9c2.1-4.13 7.57-4.74 11.12-1.21 5.48 5.45 11 10.89 16.39 16.41a25 25 0 008 6 16.44 16.44 0 01-12.73-.26 19.1 19.1 0 01-6.24-4.43q-8.31-8.27-16.54-16.51z" />
-  
-        </g>
-      </g>
-    </g>
-  
-  </svg>
-  <script>
-    const customCursor = document.getElementById("svg");
-    const svgp = document.getElementById("svgp");
-    
-    // إعدادات الأداء
-    let lastX = 0, lastY = 0;
-    let animationFrame;
-
-    // دالة التحديث الأمثل
-    const updateCursor = (e) => {
-      const rect = svgp.getBoundingClientRect();
-      const x = e.clientX - rect.left - 20;
-      const y = e.clientY - rect.top - 20;
-      
-      // تحديث مباشر بدون requestAnimationFrame
-      customCursor.setAttribute('transform', `translate(${x},${y}) scale(0.4)`);
-    };
-
-    // معالجة الحركة بأعلى أداء
-    svgp.addEventListener('mousemove', (e) => {
-      // إلغاء أي إطارات سابقة
-      if(animationFrame) cancelAnimationFrame(animationFrame);
-      
-      // التحديث المباشر
-      updateCursor(e);
-      
-      // تحديث إضافي لضمان السلاسة
-      animationFrame = requestAnimationFrame(() => updateCursor(e));
-    });
-
-    // إعادة التعيين عند المغادرة
-    svgp.addEventListener('mouseleave', () => {
-      customCursor.removeAttribute('transform');
-    });
-  </script>
-
+<script>
+  function syncContentEditable() {
+    var editableContent = document.getElementById("editableField").innerHTML;
+    document.getElementById("hiddenField").value = editableContent;
+  }
+</script>
 </body>
 </html>
 
 
+
+
+
+
+<!--
+  <div contenteditable="true" id="editableField">اكتب هنا...</div>
+  <button onclick="saveContent()">حفظ</button>
+  <button onclick="loadContent()">تحميل</button>
+  
+  <script>
+    // حفظ البيانات في Local Storage
+    function saveContent() {
+      var content = document.getElementById("editableField").innerHTML;
+      localStorage.setItem("savedContent", content);
+      alert("تم حفظ البيانات!");
+    }
+  
+    // تحميل البيانات من Local Storage
+    function loadContent() {
+      var content = localStorage.getItem("savedContent");
+      if (content) {
+        document.getElementById("editableField").innerHTML = content;
+        alert("تم تحميل البيانات!");
+      } else {
+        alert("لا توجد بيانات محفوظة.");
+      }
+    }
+    
+    var content = localStorage.getItem("savedContent");
+    window.onload = () => {
+      document.getElementById("editableField").innerHTML = content;
+    }
+  </script>
+
+-->
 

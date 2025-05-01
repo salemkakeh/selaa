@@ -4,5 +4,17 @@
   --gray:         #ced4db;
   --text:         #FFFFFF;
   --t-black:      #202020;
+  --blue: #0d4082;
 }
+
+
+/* updatre container for chrome broser screen */
+.container {
+  @media (width >=96rem) {
+    max-width: 90rem !important;
+  }
+}
+
+/* updatre container for chrome broser */
+
 

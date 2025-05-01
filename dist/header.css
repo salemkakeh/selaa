@@ -1,0 +1,79 @@
+/* start customaize main page  */
+header .link>li {
+  padding-inline: 10px;
+}
+
+header .link li:hover {
+  color: var(--button-color);
+}
+
+header .link>li:hover .text>i {
+  transform: scaleY(-1) rotate(270deg);
+}
+
+header .link li:hover .big-menu {
+  display: block;
+}
+
+
+header .container .menu {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+header .container .menu span {
+  height: 4px;
+  width: 100%;
+  background-color: var(--text);
+  position: absolute;
+  transition: .2s;
+  border-radius: 4px;
+}
+
+header .container .menu span:first-child {
+  top: 0;
+}
+
+header .container .menu.active span:last-child {
+  bottom: 50%;
+  transform: translateY(50%) rotate(45deg);
+}
+
+header .container .menu.active span:first-child {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+header .container .menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+
+header .container .menu span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .container .menu span:last-child {
+  bottom: 0;
+}
+
+
+header .container aside .nav.active {
+  display: none;
+}
+
+header .container aside {
+  display: none;
+}
+
+header .container aside.active {
+  display: block;
+}
+
+
+footer {
+  box-shadow: 0 0 20px #20202031;
+}
